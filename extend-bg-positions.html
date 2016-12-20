@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>灵活的背景定位</title>
+    <style>
+        div{
+            margin: 0 auto;
+            background: #58a url("http://csssecrets.io/images/code-pirate.svg") no-repeat;
+            /*background-position: right 10px bottom 10px;*/
+            background-position: calc(100% - 20px) calc(100% - 10px);
+            background-origin: content-box;
+            width: 150px;
+            height: 100px;
+            padding: 10px;
+            color:#ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Code Pirate
+    </div>
+</body>
+</html>

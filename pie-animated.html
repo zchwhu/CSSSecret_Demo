@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简单的饼图</title>
+    <style>
+        .pie{
+            width: 300px;
+            height: 300px;
+            margin: 100px;
+            border-radius: 50%;
+            background: yellowgreen;
+            background-image: linear-gradient(to right,transparent 50%,#655 0);
+            overflow: hidden;
+        }
+
+        .pie::before{
+            content:'';
+            display:block;
+            margin-left:50%;
+            height: 100%;
+            /*border-radius: 0 100% 100% 0 /50%;*/
+            background-color: inherit;
+            transform-origin: left;
+            /*-webkit-transform: rotate(0.2turn);*/
+            /*-moz-transform: rotate(0.2turn);*/
+            /*-ms-transform: rotate(0.2turn);*/
+            /*-o-transform: rotate(0.2turn);*/
+            /*transform: rotate(0.1turn);*/
+            animation:spin 3s linear infinite,
+                        bg 6s step-end infinite;
+        }
+
+        .pie1{
+            width: 300px;
+            height: 300px;
+            margin: 100px;
+            border-radius: 50%;
+            background: yellowgreen;
+            background-image: linear-gradient(to right,transparent 50%,#655 0);
+            overflow: hidden;
+        }
+
+        .pie1::before{
+            content:'';
+            display:block;
+            margin-left:50%;
+            height: 100%;
+            /*border-radius: 0 100% 100% 0 /50%;*/
+            background-color: inherit;
+            transform-origin: left;
+            /*-webkit-transform: rotate(0.2turn);*/
+            /*-moz-transform: rotate(0.2turn);*/
+            /*-ms-transform: rotate(0.2turn);*/
+            /*-o-transform: rotate(0.2turn);*/
+            /*transform: rotate(0.1turn);*/
+            animation:spin 50s linear infinite,
+            bg 100s step-end infinite;
+            animation-play-state: paused;
+            animation-delay: inherit;
+        }
+
+        @-moz-keyframes spin {
+            to{
+                -webkit-transform: rotate(.5turn);
+                -moz-transform: rotate(.5turn);
+                -ms-transform: rotate(.5turn);
+                -o-transform: rotate(.5turn);
+                transform: rotate(.5turn);
+            }
+        }
+
+        @-moz-keyframes bg {
+            50%{
+                background: #655;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pie"></div>
+    <div class="pie1" style="animation-delay: -20s">20%</div>
+    <div class="pie1" style="animation-delay: -60s">60%</div>
+</body>
+</html>

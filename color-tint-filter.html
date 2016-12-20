@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>染色效果</title>
+    <style>
+        #img1{
+            -webkit-transition: filter 1s,-webkit-filer 1s;
+            -moz-transition: filter 1s,-webkit-filer 1s;
+            -ms-transition: filter 1s,-webkit-filer 1s;
+            -o-transition: filter 1s,-webkit-filer 1s;
+            transition: filter 1s,-webkit-filer 1s;
+            filter: sepia(1) saturate(4) hue-rotate(295deg);
+            -webkit-filter: sepia(1) saturate(4) hue-rotate(295deg);
+            width: 500px;
+            height: auto;
+        }
+
+        #img1:hover,
+        #img1:focus{
+            filter: none;
+            -webkit-filter:none;
+        }
+
+        a{
+            background: hsl(335,100%,50%);
+            display: block;
+            width: 500px;
+        }
+
+        #img2{
+            mix-blend-mode: luminosity;
+            width: 500px;
+            height: auto;
+
+        }
+
+        #img3{
+            width: 500px;
+            height:300px;
+            margin: 100px;
+            background-size: cover;
+            background-color: hsl(335,100%,50%);
+            background-blend-mode: luminosity;
+            -webkit-transition: 1s background-color;
+            -moz-transition: 1s background-color;
+            -ms-transition: 1s background-color;
+            -o-transition: 1s background-color;
+            transition: 1s background-color;
+        }
+
+        #img3:hover{
+            background-color: transparent;
+        }
+
+    </style>
+</head>
+<body>
+    <img src="img/tiger.jpg" id="img1">
+
+    <a href="#something">
+        <img src="img/tiger.jpg" alt="Rawrrr!" id="img2">
+    </a>
+
+    <div id="img3" class="tinted-image" style="background-image: url('img/tiger.jpg')"></div>
+</body>
+</html>

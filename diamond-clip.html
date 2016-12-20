@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菱形剪裁方案</title>
+    <style>
+        img{
+            /*-moz-clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);*/
+            /*-webkit-clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);*/
+            -webkit-clip-path: circle(50% at 50% 50%);
+            -moz-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            -webkit-transition:1s;
+            -moz-transition: 1s;
+            -ms-transition: 1s;
+            -o-transition: 1s;
+            transition: 1s;
+        }
+
+        img:hover{
+            /*-webkit-clip-path: polygon(0 0,100% 0,100% 100%,0 100%);*/
+            /*-moz-clip-path: polygon(0 0,100% 0,100% 100%,0 100%);*/
+            /*clip-path: polygon(0 0,100% 0,100% 100%,0 100%);*/
+            -webkit-clip-path: circle(30% at 50% 50%);
+            -moz-clip-path: circle(30% at 50% 50%);
+            clip-path: circle(30% at 50% 50%);
+        }
+    </style>
+</head>
+<body>
+    <img src="img/adamcatlace.jpg">
+</body>
+</html>

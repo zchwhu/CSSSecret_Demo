@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>平行四边形</title>
+    <style>
+        a{
+            -webkit-transform: skewX(-45deg);
+            -moz-transform: skewX(-45deg);
+            -ms-transform: skewX(-45deg);
+            -o-transform: skewX(-45deg);
+            transform: skewX(-45deg);
+            width: 100px;
+            height: 30px;
+            background: #58a;
+            color: #ffffff;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            margin: 0 auto;
+            text-transform: uppercase;
+        }
+        a>div{
+            -webkit-transform: skew(45deg);
+            -moz-transform: skew(45deg);
+            -ms-transform: skew(45deg);
+            -o-transform: skew(45deg);
+            transform: skew(45deg);
+        }
+        
+        #button{
+            width: 100px;
+            height: 30px;
+            position: relative;
+            text-align: center;
+            line-height: 30px;
+            color: #ffffff;
+        }
+
+        #button::before{
+            content: "";
+            position: absolute;
+            background: #58a;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            z-index: -1;
+            -webkit-transform: skew(-45deg);
+            -moz-transform: skew(-45deg);
+            -ms-transform: skew(-45deg);
+            -o-transform: skew(-45deg);
+            transform: skew(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <a href="#yolo" class="button">Click me</a>
+    <a href="#yolo" class="button">
+        <div>Click me</div>
+    </a>
+
+    <div id="button">
+        CLICK ME
+    </div>
+</body>
+</html>

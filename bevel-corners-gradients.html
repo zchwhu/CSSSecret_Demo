@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>切角效果</title>
+    <style>
+        #div1{
+            margin: 100px;
+            width: 200px;
+            height: 100px;
+            padding: 10px;
+            color: white;
+            background: #58a;
+            background: linear-gradient(-45deg,transparent 15px,#58a 0);
+        }
+
+        #div2{
+            margin: 100px;
+            width: 200px;
+            height: 100px;
+            padding: 10px;
+            /*border: 1px solid #333333;*/
+            color: white;
+            background: linear-gradient(-45deg,transparent 15px,#58a 0) right,
+                        linear-gradient(45deg,transparent 15px,#58a 0) left;
+            background-size: 50% 100%;
+            background-repeat: no-repeat;
+        }
+
+        #div3{
+            margin: 100px;
+            width: 200px;
+            height: 100px;
+            padding: 10px;
+            /*border: 1px solid #333333;*/
+            color: white;
+            background:
+            linear-gradient(-45deg,transparent 15px,#58a 0) bottom right,
+            linear-gradient(45deg,transparent 15px,#58a 0) bottom left,
+            linear-gradient(135deg,transparent 15px,#58a 0) top left,
+            linear-gradient(-135deg,transparent 15px,#58a 0) top right;
+            background-repeat: no-repeat;
+            background-size: 50% 50%;
+        }
+
+        #div4{
+            width: 200px;
+            height: 100px;
+            margin: 100px;
+            color: white;
+            border:15px solid transparent;
+            /*border-image:*/
+            /*1 url('data:image/svg+xml,\*/
+            /*<svg xmlns="http://www.w3.org/2000/svg"*/
+                /*width="3" height="3" fill="%2358a">\*/
+            /*<polygon points="0,1 1,0 2,0 3,1 3,2 2,3 1,3 0,2" />\*/
+            /*</svg>');*/
+            border-image:1 url('data:image/svg+xml,\
+	                      <svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" fill="%2358a">\
+	                      <polygon points="0,1 1,0 2,0 3,1 3,2 2,3 1,3 0,2" />\
+	                      </svg>');
+            background: #5588aa;
+            /*background: radial-gradient(hsla(0,0%,100%,0.2) transparent;*/
+            background-clip: padding-box;
+        }
+
+        #div5{
+            width: 200px;
+            height: 100px;
+            margin: 100px;
+            color: white;
+            padding: 10px;
+            background: #5588aa;
+            -webkit-clip-path: polygon(20px 0,calc(100% - 20px) 0,100% 20px,
+            100% calc(100% - 20px),calc(100% - 20px) 100%,
+            20px 100%,0 calc(100% - 20px),0 20px);
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        Hey,focus!You're supposed to be looking at my corners,not reading my text.The text is just placeholder.
+    </div>
+
+    <div id="div2">
+        Hey,focus!You're supposed to be looking at my corners,not reading my text.The text is just placeholder.
+    </div>
+
+    <div id="div3">
+        Hey,focus!You're supposed to be looking at my corners,not reading my text.The text is just placeholder.
+    </div>
+
+    <div id="div4">
+        Hey,focus!You're supposed to be looking at my corners,not reading my text.The text is just placeholder.
+    </div>
+
+    <div id="div5">
+        Hey,focus!You're supposed to be looking at my corners,not reading my text.The text is just placeholder.
+    </div>
+
+
+</body>
+</html>
